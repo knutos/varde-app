@@ -1,0 +1,135 @@
+/* Brukerveiledningen. Laget for A4-utskrift (PDF), men kan også leses i nettleseren. */
+:root {
+  --ink: #0b2433;
+  --soft: #3b5566;
+  --muted: #6b8290;
+  --deep: #0a2f45;
+  --teal: #0f5e6b;
+  --teal-light: #1a7f86;
+  --orange: #f4a63c;
+  --coral: #e8524a;
+  --magenta: #d43ea0;
+  --line: #dfe7e9;
+}
+
+@page {
+  size: A4;
+  margin: 16mm 16mm 18mm;
+  @bottom-left { content: "Varde"; font: 600 8.5pt -apple-system, "Helvetica Neue", Arial, sans-serif; color: #8aa0ab; }
+  @bottom-right { content: counter(page); font: 600 8.5pt -apple-system, "Helvetica Neue", Arial, sans-serif; color: #8aa0ab; }
+}
+@page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  margin: 0; color: var(--ink);
+  font: 10pt/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+h1, h2, h3 { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.015em; line-height: 1.2; }
+h2 { font-size: 21pt; margin: 0 0 4mm; break-after: avoid; }
+h3 { font-size: 12pt; margin: 4.5mm 0 1.5mm; color: var(--deep); break-after: avoid; }
+p { margin: 0 0 3mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+li { margin-bottom: 1.2mm; }
+a { color: var(--teal); text-decoration: none; }
+b, strong { color: var(--deep); }
+.ui { font-weight: 650; color: var(--deep); background: #eef4f4; border-radius: 4px; padding: 0 1.4mm; white-space: nowrap; }
+
+/* Forside */
+.cover {
+  page: cover; height: 297mm; width: 210mm; overflow: hidden; color: #fff;
+  background:
+    url("../assets/contours.svg") center / cover no-repeat,
+    radial-gradient(160mm 120mm at 90% 5%, rgba(26, 127, 134, 0.6), transparent 60%),
+    linear-gradient(160deg, #082638 0%, #0a3a52 45%, #0f5e6b 100%);
+  padding: 30mm 22mm 0; break-after: page; display: flex; flex-direction: column;
+}
+.cover img.icon { width: 30mm; height: 30mm; border-radius: 7mm; }
+.cover .kicker { margin-top: 14mm; text-transform: uppercase; letter-spacing: 0.2em; font-size: 9.5pt; font-weight: 700; color: var(--orange); }
+.cover h1 { font-size: 46pt; margin: 3mm 0 4mm; }
+.cover .sub { font-size: 15pt; color: rgba(255, 255, 255, 0.85); max-width: 130mm; }
+.cover .meta { font-size: 9.5pt; color: rgba(255, 255, 255, 0.75); margin-top: 6mm; }
+.cover .phones { margin: auto -10mm 0; display: flex; gap: 8mm; justify-content: center; align-items: flex-start; height: 118mm; overflow: hidden; }
+.cover .phones .phone { width: 54mm; flex: none; }
+.cover .phones .phone.low { margin-top: 18mm; width: 50mm; }
+
+/* Telefonramme */
+.phone {
+  border-radius: 8mm; padding: 1.6mm; background: linear-gradient(145deg, #2b3138, #0d1014);
+}
+.phone img { display: block; width: 100%; border-radius: 6.6mm; }
+
+/* Innhold */
+.toc { break-after: page; }
+.toc h2 { margin-bottom: 8mm; }
+.toc ol { list-style: none; padding: 0; counter-reset: toc; columns: 1; }
+.toc li { counter-increment: toc; display: flex; gap: 5mm; align-items: baseline; padding: 2.6mm 0; border-bottom: 1px solid var(--line); margin: 0; font-size: 11.5pt; }
+.toc li::before { content: counter(toc, decimal-leading-zero); font-weight: 750; color: var(--teal-light); width: 9mm; flex: none; }
+.toc li span { color: var(--muted); font-size: 9.5pt; margin-left: auto; text-align: right; }
+.intro-box { margin-top: 10mm; padding: 6mm 7mm; border-radius: 4mm; background: #eef4f4; }
+
+/* Kapitler */
+.chapter { break-before: page; }
+.chapter-head { display: flex; align-items: center; gap: 4mm; margin-bottom: 5mm; padding-bottom: 3mm; border-bottom: 2px solid var(--line); }
+.chapter-head .num {
+  flex: none; width: 13mm; height: 13mm; border-radius: 3.5mm; display: grid; place-items: center;
+  font-weight: 800; font-size: 13pt; color: #fff; background: linear-gradient(135deg, var(--teal-light), var(--deep));
+}
+.chapter-head h2 { margin: 0; }
+.chapter-head .tag { margin-left: auto; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 700; }
+.lead { font-size: 11pt; color: var(--soft); }
+.with-shot { display: grid; grid-template-columns: 1fr 44mm; gap: 7mm; align-items: start; }
+.with-shot .phone { break-inside: avoid; }
+.shots { display: flex; flex-direction: column; gap: 6mm; }
+figure { margin: 0; }
+figcaption { font-size: 8.5pt; color: var(--muted); text-align: center; margin-top: 2mm; }
+
+/* Trinn */
+ol.steps { list-style: none; padding: 0; counter-reset: step; }
+ol.steps > li { counter-increment: step; position: relative; padding-left: 9mm; margin-bottom: 2.6mm; }
+ol.steps > li::before {
+  content: counter(step); position: absolute; left: 0; top: 0.2mm; width: 6mm; height: 6mm; border-radius: 50%;
+  background: var(--orange); color: #2a1500; font-weight: 800; font-size: 8.5pt; display: grid; place-items: center;
+}
+
+/* Bokser */
+.tip, .warn, .info { border-radius: 3.5mm; padding: 3mm 4mm 3mm 12mm; margin: 3mm 0; position: relative; break-inside: avoid; font-size: 10pt; }
+.tip::before, .warn::before, .info::before {
+  position: absolute; left: 3.5mm; top: 3mm; width: 6mm; height: 6mm; border-radius: 50%;
+  display: grid; place-items: center; font-weight: 800; color: #fff; font-size: 9pt;
+}
+.tip { background: #fff5e6; } .tip::before { content: "★"; background: var(--orange); }
+.warn { background: #fdecea; } .warn::before { content: "!"; background: var(--coral); }
+.info { background: #e9f3f4; } .info::before { content: "i"; background: var(--teal-light); font-family: Georgia, serif; }
+.tip b:first-child, .warn b:first-child, .info b:first-child { display: block; margin-bottom: 1mm; }
+
+/* Tabeller */
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 5mm; font-size: 9.8pt; break-inside: avoid; }
+th { text-align: left; background: var(--deep); color: #fff; font-weight: 650; padding: 1.8mm 3mm; }
+th:first-child { border-top-left-radius: 2.5mm; } th:last-child { border-top-right-radius: 2.5mm; }
+td { padding: 1.7mm 3mm; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:nth-child(even) td { background: #f6f9f9; }
+td:first-child { font-weight: 650; color: var(--deep); white-space: nowrap; }
+
+/* Kontrollknappene */
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 4mm 0; }
+.control { display: flex; gap: 3mm; align-items: flex-start; border: 1px solid var(--line); border-radius: 3mm; padding: 2.4mm; break-inside: avoid; font-size: 9.6pt; }
+.control .k { flex: none; width: 8mm; height: 8mm; border-radius: 2.5mm; background: var(--deep); color: #fff; display: grid; place-items: center; }
+.control .k svg { width: 4.8mm; height: 4.8mm; }
+.control b { display: block; }
+
+.back {
+  break-before: page; text-align: center; padding-top: 60mm;
+}
+.back img { width: 22mm; height: 22mm; border-radius: 5mm; margin: 0 auto 6mm; display: block; }
+.back p { color: var(--soft); }
+
+/* I nettleseren: sidene som ark på en grå bakgrunn */
+@media screen {
+  .phone { box-shadow: 0 3mm 8mm -2mm rgba(0, 0, 0, 0.35); }
+  body { background: #d9e1e3; padding: 10mm 0; }
+  .sheet, .cover { width: 210mm; margin: 0 auto 10mm; background-color: #fff; box-shadow: 0 2mm 10mm rgba(0, 0, 0, 0.15); }
+  .sheet { padding: 20mm 18mm; }
+  .chapter, .toc, .back { break-before: auto; }
+}
