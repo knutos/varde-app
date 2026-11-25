@@ -29,12 +29,12 @@
   <ol>
     <li><a href="#kom-i-gang">Kom i gang</a><span>Skjermbildet og knappene</span></li>
     <li><a href="#kartene">Kartene</a><span>Grunnkart, demping, hytter og turruter</span></li>
-    <li><a href="#sok">Søk og koordinater</a><span>Steder, adresser, koordinater og trådkors</span></li>
+    <li><a href="#sok">Søk og koordinater</a><span>Steder, adresser, koordinater, trådkors og lagrede steder</span></li>
     <li><a href="#punkt">Informasjon om et punkt</a><span>Høyde, vær, snø, skred og tidevann</span></li>
     <li><a href="#sikt">Siktanalyse</a><span>Hva kan du se herfra?</span></li>
     <li><a href="#reise">Reiseplanlegging og veiledning</a><span>Kollektivt, bil, til fots og sykkel</span></li>
     <li><a href="#kollektiv">Kollektivtrafikk</a><span>Holdeplasser og sanntidsavganger</span></li>
-    <li><a href="#spor">Spor</a><span>Ta opp, se og dele turer</span></li>
+    <li><a href="#spor">Mine turer</a><span>Spor, ruter og lagrede steder</span></li>
     <li><a href="#uten-nett">Kart uten nett</a><span>Last ned før du drar</span></li>
     <li><a href="#personvern">Personvern, kilder og sikkerhet</a><span>Hva skjer med dataene dine</span></li>
   </ol>
@@ -53,8 +53,8 @@
       <h3>Skjermbildet</h3>
       <ul>
         <li><b>Søkefeltet</b> øverst: søk etter steder, adresser og koordinater.</li>
-        <li><b>Knapperaden</b> til høyre: kartvalg, følgemodus, trådkors, nærmeste holdeplass og spor, og under dem zoom inn og ut.</li>
-        <li><b>Panelet</b> nederst til venstre: fart, høyde over havet, nøyaktigheten på posisjonen og koordinatene der du står. Knappen <span class="ui">Vis info for posisjonen din</span> åpner et infokort for stedet du står.</li>
+        <li><b>Knapperaden</b> til høyre: kartvalg, følgemodus, trådkors, nærmeste holdeplass og Mine turer, og under dem zoom inn og ut.</li>
+        <li><b>Panelet</b> nederst, like bredt som søkefeltet: fart, høyde over havet, nøyaktigheten på posisjonen og koordinatene der du står. Det vises når kartet følger deg (blå pil) eller trådkorset er på. Knappen <span class="ui">Vis info for posisjonen din</span> åpner et infokort for stedet du står.</li>
       </ul>
       <p>Du flytter kartet med én finger, zoomer ved å klype og roterer med to fingre.</p>
       <div class="info"><b>Rettigheter</b>Lenken «Rettigheter» og teksten «© Kartverket, Entur, OpenStreetMap» nederst i kartet viser hvem som eier kartdataene.</div>
@@ -64,12 +64,12 @@
 
   <h3>Knappene til høyre</h3>
   <div class="controls">
-    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg></div><div><b>Kart og visninger</b>Velg grunnkart, slå på hytter, turruter og holdeplasser, last ned kart og velg hva infokortet viser. En blå prikk betyr at holdeplasser vises.</div></div>
+    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg></div><div><b>Kart og visninger</b>Velg grunnkart, slå på hytter, turruter, lagrede steder, ruter, spor og holdeplasser, last ned kart og velg hva infokortet viser. En blå prikk betyr at holdeplasser vises.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M21 3 3 10.5l7.5 3 3 7.5z"/></svg></div><div><b>Følgemodus</b>Trykk for å sentrere kartet på deg og følge posisjonen, trykk igjen for å slutte. Hold inne for å zoome helt inn på der du står.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M7 8l5-5 5 5"/></svg></div><div><b>Kurs opp</b>Vises mens kartet følger deg. Snur kartet etter retningen du går eller kjører, i stedet for nord opp.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M12 9v6M9 12h6"/></svg></div><div><b>Trådkors</b>Viser et trådkors midt i kartet med koordinater og høyde for punktet under. Flytt kartet for å flytte trådkorset.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 11h12M9 21l1.5-4M15 21l-1.5-4"/></svg></div><div><b>Nærmeste holdeplass</b>Finner holdeplassen det er kortest å gå til, med gangvei og avganger.</div></div>
-    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></div><div><b>Spor</b>Ta opp turen og se lagrede spor. Knappen blir rød mens et opptak pågår.</div></div>
+    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></div><div><b>Mine turer</b>Ta opp spor, og se sporene, rutene og stedene dine. En rød prikk viser at et spor tas opp.</div></div>
   </div>
 </section>
 
@@ -105,6 +105,8 @@
       <p>Trykk på en hytte for å se om den er betjent, selvbetjent eller ubetjent, hvor mange senger den har, om den er låst med DNT-nøkkel, og en lenke til <span class="ui">Mer på ut.no</span> eller hyttas nettside.</p>
       <h3>Turruter</h3>
       <p>Slå på <span class="ui">Turruter</span> for merkede fotruter og sykkelruter fra Turrutebasen. Trykk på en rute for å se navnet, typen, merkingen, graderingen (enkel, middels, krevende eller ekspert) og hvem som holder den ved like.</p>
+      <h3>Lagrede steder, ruter og spor</h3>
+      <p>Slå på <span class="ui">Lagrede steder</span>, <span class="ui">Ruter</span> og <span class="ui">Spor</span> for å se alle stedene, rutene og sporene dine i kartet. Det du velger i søket eller i Mine turer, vises uansett.</p>
       <h3>Holdeplasser</h3>
       <p>Slå på <span class="ui">Holdeplasser</span> under <b>Kollektivtrafikk</b> for å se holdeplasser for buss, tog, trikk og båt når du zoomer inn. Se kapittel 7.</p>
     </div>
@@ -139,8 +141,15 @@
   </ul>
 
   <h3>Trådkors</h3>
-  <p>Trykk <span class="ui">Trådkors</span> i knapperaden. Et trådkors vises midt i kartet, og koordinatene og høyden for punktet under oppdateres når du flytter kartet. Kartet slutter å følge deg, så det står stille mens du sikter. Trykk på knappen igjen for å fjerne trådkorset.</p>
+  <p>Trykk <span class="ui">Trådkors</span> i knapperaden. Et trådkors vises midt i kartet, og panelet nederst viser høyden, avstanden fra deg og koordinatene for punktet under mens du flytter kartet. Kartet slutter å følge deg, så det står stille mens du sikter. Trykk på knappen igjen for å fjerne trådkorset.</p>
   <div class="tip"><b>Tips</b>Trådkorset er nyttig når du skal lese av koordinatene til et sted du ser i kartet, for eksempel for å gi dem til en annen eller melde inn et funn.</div>
+
+  <h3>Lagrede steder</h3>
+  <ul>
+    <li><b>Lagre:</b> trykk <span class="ui">Lagre</span> (stjernen) i infokortet for et punkt, en hytte, en holdeplass eller et søketreff. Gi stedet et navn, et notat og eventuelt en mappe.</li>
+    <li><b>Finn igjen:</b> lagrede steder vises med en gul stjerne i kartet. Skriv navnet i søkefeltet, så kommer stedet først i treffene, også uten nett. Alle stedene, mappe for mappe, ligger under <b>Steder</b> i Mine turer.</li>
+    <li><b>Endre eller slette:</b> trykk <span class="ui">Lagret</span> i kortet for stedet.</li>
+  </ul>
 </section>
 
 <!-- 4 -->
@@ -268,25 +277,27 @@
 
 <!-- 8 -->
 <section class="sheet chapter" id="spor">
-  <div class="chapter-head"><div class="num">8</div><h2>Spor</h2><div class="tag">Ta opp turen</div></div>
+  <div class="chapter-head"><div class="num">8</div><h2>Mine turer</h2><div class="tag">Spor, ruter og steder</div></div>
   <div class="with-shot">
     <div>
-      <p class="lead">Trykk <span class="ui">Spor</span> (sirkelen nederst i knapperaden) for å ta opp turen din og se tidligere turer.</p>
+      <p class="lead">Trykk <span class="ui">Mine turer</span> (turgåeren nederst i knapperaden). Her ligger <b>Spor</b> du har tatt opp, <b>Ruter</b> du skal gå og <b>Steder</b> du har lagret.</p>
       <h3>Ta opp en tur</h3>
       <ol class="steps">
-        <li>Trykk <span class="ui">Start opptak</span>. Knappen i knapperaden blir rød.</li>
-        <li>Lås gjerne telefonen og legg den i lomma. Opptaket fortsetter når skjermen er låst.</li>
-        <li>Mens opptaket pågår, ser du avstand og tid. Trykk <span class="ui">Stopp og lagre</span> når du er ferdig.</li>
+        <li>Trykk <span class="ui">Ta opp spor</span>. En rød prikk på knappen viser at sporet tas opp.</li>
+        <li>Lås gjerne telefonen og legg den i lomma. Sporet tas opp også når skjermen er låst.</li>
+        <li>Mens sporet tas opp, ser du avstand og tid nederst i kartet. Trykk <span class="ui">Stopp og lagre</span> når du er ferdig.</li>
       </ol>
       <h3>Lagrede spor</h3>
       <ul>
-        <li>Turene ligger under <b>Lagrede spor</b>. Trykk på et spor for å vise det i kartet, og <span class="ui">Skjul spor</span> for å fjerne det.</li>
+        <li>Turene ligger under <b>Lagrede spor</b>. Trykk på et spor for å vise det i kartet, og <span class="ui">Skjul i kartet</span> for å fjerne det. Hold fingeren på et spor og velg <span class="ui">Lagre som rute</span> for å gå turen igjen.</li>
         <li>Trykk på delingsknappen, <span class="ui">Del som GPX</span>, for å sende sporet som en GPX-fil på e-post, til Filer eller til en annen app.</li>
-        <li>Sveip mot venstre for å slette et spor.</li>
+        <li>Sveip mot venstre for å slette et spor eller en rute.</li>
       </ul>
+      <h3>Ruter fra andre apper</h3>
+      <p>Åpne en GPX-fil i Varde fra Filer, e-post eller AirDrop, eller trykk <span class="ui">Importer GPX-fil</span> (dokumentet med pluss). Sporet i filen legges blant <b>Ruter</b>, og veipunktene blir lagrede steder i en egen mappe. Sletter du ruten, slettes stedene som fulgte med.</p>
       <div class="info"><b>Personvern</b>Spor du tar opp, lagres bare på telefonen. De sendes ikke noe sted før du selv deler dem.</div>
     </div>
-    <figure><div class="phone"><img src="../assets/screens/tracks.jpg" alt=""></div><figcaption>Spor</figcaption></figure>
+    <figure><div class="phone"><img src="../assets/screens/tracks.jpg" alt=""></div><figcaption>Mine turer</figcaption></figure>
   </div>
 </section>
 

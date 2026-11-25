@@ -29,12 +29,12 @@
   <ol>
     <li><a href="#start">Getting started</a><span>The screen and the buttons</span></li>
     <li><a href="#maps">The maps</a><span>Base maps, dimming, cabins and trails</span></li>
-    <li><a href="#search">Search and coordinates</a><span>Places, addresses, coordinates and crosshair</span></li>
+    <li><a href="#search">Search and coordinates</a><span>Places, addresses, coordinates, crosshair and saved places</span></li>
     <li><a href="#point">Information about a point</a><span>Elevation, weather, snow, avalanches and tides</span></li>
     <li><a href="#viewshed">Viewshed analysis</a><span>What can you see from here?</span></li>
     <li><a href="#trip">Trip planning and guidance</a><span>Public transport, car, walking and cycling</span></li>
     <li><a href="#transit">Public transport</a><span>Stops and real-time departures</span></li>
-    <li><a href="#tracks">Tracks</a><span>Record, view and share trips</span></li>
+    <li><a href="#tracks">My Trips</a><span>Tracks, routes and saved places</span></li>
     <li><a href="#offline">Offline maps</a><span>Download before you go</span></li>
     <li><a href="#privacy">Privacy, sources and safety</a><span>What happens to your data</span></li>
   </ol>
@@ -53,8 +53,8 @@
       <h3>The screen</h3>
       <ul>
         <li><b>The search field</b> at the top: search for places, addresses and coordinates.</li>
-        <li><b>The button column</b> on the right: maps, tracking mode, crosshair, nearest stop and tracks, with zoom in and out below.</li>
-        <li><b>The panel</b> at the bottom left: speed, elevation above sea level, the accuracy of your position and the coordinates where you are. The <span class="ui">Show Info for Your Location</span> button opens an info card for the spot you are standing on.</li>
+        <li><b>The button column</b> on the right: maps, tracking mode, crosshair, nearest stop and My Trips, with zoom in and out below.</li>
+        <li><b>The panel</b> at the bottom, as wide as the search field: speed, elevation above sea level, the accuracy of your position and the coordinates where you are. It is shown when the map follows you (blue arrow) or the crosshair is on. The <span class="ui">Show Info for Your Location</span> button opens an info card for the spot you are standing on.</li>
       </ul>
       <p>Move the map with one finger, pinch to zoom and rotate with two fingers.</p>
       <div class="info"><b>Attribution</b>The legal link and the text “© Kartverket, Entur, OpenStreetMap” at the bottom of the map show who owns the map data.</div>
@@ -64,12 +64,12 @@
 
   <h3>The buttons on the right</h3>
   <div class="controls">
-    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg></div><div><b>Maps and views</b>Choose a base map, turn on cabins, trails and stops, download maps and choose what the info card shows. A blue dot means stops are shown.</div></div>
+    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg></div><div><b>Maps and views</b>Choose a base map, turn on cabins, trails, saved places, routes, tracks and stops, download maps and choose what the info card shows. A blue dot means stops are shown.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M21 3 3 10.5l7.5 3 3 7.5z"/></svg></div><div><b>Tracking mode</b>Tap to centre the map on you and follow your position, tap again to stop. Touch and hold to zoom all the way in on where you are.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M7 8l5-5 5 5"/></svg></div><div><b>Heading up</b>Shown while the map follows you. Turns the map in the direction you are walking or driving instead of north up.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M12 9v6M9 12h6"/></svg></div><div><b>Crosshair</b>Shows a crosshair in the middle of the map with the coordinates and elevation of the point underneath. Move the map to move the crosshair.</div></div>
     <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 11h12M9 21l1.5-4M15 21l-1.5-4"/></svg></div><div><b>Nearest stop</b>Finds the stop that is the shortest walk away, with the walking route and departures.</div></div>
-    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></div><div><b>Tracks</b>Record your trip and see saved tracks. The button turns red while recording.</div></div>
+    <div class="control"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></svg></div><div><b>My Trips</b>Record a track, and see your tracks, routes and places. A red dot shows that a track is being recorded.</div></div>
   </div>
 </section>
 
@@ -105,6 +105,8 @@
       <p>Tap a cabin to see whether it is staffed, self-service or no-service, how many beds it has, whether it is locked with the DNT key, and a link to ut.no or the cabin's website.</p>
       <h3>Trails</h3>
       <p>Turn on <span class="ui">Trails</span> for marked hiking and cycling routes from the national trail database. Tap a route to see its name, type, marking, grading (easy, medium, demanding or expert) and who maintains it.</p>
+      <h3>Saved places, routes and tracks</h3>
+      <p>Turn on <span class="ui">Saved Places</span>, <span class="ui">Routes</span> and <span class="ui">Tracks</span> to see all your places, routes and tracks on the map. Whatever you select in search or in My Trips is always shown.</p>
       <h3>Stops</h3>
       <p>Turn on <span class="ui">Stops</span> under <b>Public transport</b> to see bus, train, tram and boat stops when you zoom in. See chapter 7.</p>
     </div>
@@ -139,8 +141,15 @@
   </ul>
 
   <h3>Crosshair</h3>
-  <p>Tap <span class="ui">Crosshair</span> in the button column. A crosshair appears in the middle of the map, and the coordinates and elevation of the point underneath update as you move the map. The map stops following you, so it stays still while you aim. Tap the button again to remove the crosshair.</p>
+  <p>Tap <span class="ui">Crosshair</span> in the button column. A crosshair appears in the middle of the map, and the panel at the bottom shows the elevation, the distance from you and the coordinates of the point underneath as you move the map. The map stops following you, so it stays still while you aim. Tap the button again to remove the crosshair.</p>
   <div class="tip"><b>Tip</b>The crosshair is handy for reading off the coordinates of a place you see on the map, for example to pass them on to someone or to report a find.</div>
+
+  <h3>Saved places</h3>
+  <ul>
+    <li><b>Save:</b> tap <span class="ui">Save</span> (the star) in the info card for a point, a cabin, a stop or a search result. Give the place a name, a note and, if you like, a folder.</li>
+    <li><b>Find it again:</b> saved places are shown with a yellow star on the map. Type the name in the search field and the place comes first in the results, even offline. All your places, folder by folder, are under <b>Places</b> in My Trips.</li>
+    <li><b>Edit or delete:</b> tap <span class="ui">Saved</span> in the card for the place.</li>
+  </ul>
 </section>
 
 <!-- 4 -->
@@ -268,25 +277,27 @@
 
 <!-- 8 -->
 <section class="sheet chapter" id="tracks">
-  <div class="chapter-head"><div class="num">8</div><h2>Tracks</h2><div class="tag">Record your trip</div></div>
+  <div class="chapter-head"><div class="num">8</div><h2>My Trips</h2><div class="tag">Tracks, routes and places</div></div>
   <div class="with-shot">
     <div>
-      <p class="lead">Tap <span class="ui">Tracks</span> (the circle at the bottom of the button column) to record your trip and see earlier trips.</p>
+      <p class="lead">Tap <span class="ui">My Trips</span> (the hiker at the bottom of the button column). Here you find <b>Tracks</b> you have recorded, <b>Routes</b> you plan to walk and <b>Places</b> you have saved.</p>
       <h3>Recording a trip</h3>
       <ol class="steps">
-        <li>Tap <span class="ui">Start recording</span>. The button in the button column turns red.</li>
-        <li>Feel free to lock your iPhone and put it in your pocket. Recording continues when the screen is locked.</li>
-        <li>While recording, you see the distance and time. Tap <span class="ui">Stop and save</span> when you are done.</li>
+        <li>Tap <span class="ui">Record Track</span>. A red dot on the button shows that the track is being recorded.</li>
+        <li>Feel free to lock your iPhone and put it in your pocket. The track keeps recording when the screen is locked.</li>
+        <li>While recording, you see the distance and time at the bottom of the map. Tap <span class="ui">Stop and save</span> when you are done.</li>
       </ol>
       <h3>Saved tracks</h3>
       <ul>
-        <li>Your trips are listed under <b>Saved tracks</b>. Tap a track to show it on the map, and <span class="ui">Hide track</span> to remove it.</li>
+        <li>Your trips are listed under <b>Saved tracks</b>. Tap a track to show it on the map, and <span class="ui">Hide on Map</span> to remove it. Touch and hold a track and choose <span class="ui">Save as Route</span> to walk it again.</li>
         <li>Tap the share button, <span class="ui">Share as GPX</span>, to send the track as a GPX file by email, to Files or to another app.</li>
-        <li>Swipe left to delete a track.</li>
+        <li>Swipe left to delete a track or a route.</li>
       </ul>
+      <h3>Routes from other apps</h3>
+      <p>Open a GPX file in Varde from Files, Mail or AirDrop, or tap <span class="ui">Import GPX File</span> (the document with a plus). The track in the file is added to <b>Routes</b>, and the waypoints become saved places in their own folder. If you delete the route, the places that came with it are deleted too.</p>
       <div class="info"><b>Privacy</b>Tracks you record are stored only on your iPhone. They are not sent anywhere unless you share them yourself.</div>
     </div>
-    <figure><div class="phone"><img src="../assets/screens/tracks.jpg" alt=""></div><figcaption>Tracks</figcaption></figure>
+    <figure><div class="phone"><img src="../assets/screens/tracks.jpg" alt=""></div><figcaption>My Trips</figcaption></figure>
   </div>
 </section>
 
