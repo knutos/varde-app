@@ -33,6 +33,7 @@
     <li><a href="#point">Information about a point</a><span>Elevation, weather, snow, avalanches and tides</span></li>
     <li><a href="#viewshed">Viewshed analysis</a><span>What can you see from here?</span></li>
     <li><a href="#trip">Trip planning and guidance</a><span>Public transport, car, walking and cycling</span></li>
+    <li><a href="#route">Routes via several places</a><span>Plan, save and follow a route</span></li>
     <li><a href="#transit">Public transport</a><span>Stops and real-time departures</span></li>
     <li><a href="#tracks">My Trips</a><span>Tracks, routes and saved places</span></li>
     <li><a href="#offline">Offline maps</a><span>Download before you go</span></li>
@@ -108,7 +109,7 @@
       <h3>Saved places, routes and tracks</h3>
       <p>Turn on <span class="ui">Saved Places</span>, <span class="ui">Routes</span> and <span class="ui">Tracks</span> to see all your places, routes and tracks on the map. Whatever you select in search or in My Trips is always shown.</p>
       <h3>Stops</h3>
-      <p>Turn on <span class="ui">Stops</span> under <b>Public transport</b> to see bus, train, tram and boat stops when you zoom in. See chapter 7.</p>
+      <p>Turn on <span class="ui">Stops</span> under <b>Public transport</b> to see bus, train, tram and boat stops when you zoom in. See chapter 8.</p>
     </div>
     <figure><div class="phone"><img src="../assets/screens/aerial.jpg" alt=""></div><figcaption>Aerial imagery with labels and trails</figcaption></figure>
   </div>
@@ -254,8 +255,37 @@
 </section>
 
 <!-- 7 -->
+<section class="sheet chapter" id="route">
+  <div class="chapter-head"><div class="num">7</div><h2>Routes via several places</h2><div class="tag">Plan a route</div></div>
+  <p class="lead">A route can visit as many places as you like, and each leg can have its own mode of travel. Drive to the car park, walk to the summit and take the bus home.</p>
+  <h3>Creating a route</h3>
+  <ol class="steps">
+    <li>Tap <span class="ui">My Trips</span>, choose <b>Routes</b> and tap <span class="ui">Plan New Route</span>.</li>
+    <li>Choose where the <span class="ui">Route starts from</span>: <span class="ui">Your location</span>, a saved place or a place you search for. To pick a place on the map instead, tap <span class="ui">Choose on Map</span>.</li>
+    <li>Add the next place. Touch and hold the map, tap a cabin, a stop or a saved place, or use the search field. Then tap <span class="ui">Add to Route</span> on the card. For the first place, the button is called <span class="ui">Start Route Here</span>. You can also tap <b>+</b> on the route card.</li>
+    <li>Carry on until the route visits everything you want. The route appears on the map with numbered stops.</li>
+  </ol>
+  <h3>Changing the route</h3>
+  <ul>
+    <li><b>Order:</b> drag a stop up or down. You can also touch and hold the stop and choose <span class="ui">Move Up</span> or <span class="ui">Move Down</span>.</li>
+    <li><b>Remove:</b> swipe left on the stop and tap <span class="ui">Remove</span>.</li>
+    <li><b>Mode of travel:</b> the button next to each stop chooses how you get there: <span class="ui">Public transport</span>, <span class="ui">Car</span>, <span class="ui">Walk</span> or <span class="ui">Bicycle</span>. The mode stays with the place when you change the order.</li>
+    <li><b>Legs:</b> tap a stop to see the journey there step by step, with an elevation profile.</li>
+  </ul>
+  <p>Varde calculates the legs one after the other, so a public transport journey departs after you have arrived on the leg before. The route card shows the total travel time, distance and when you arrive.</p>
+  <div class="tip"><b>Faster order</b>If there is an order in which you arrive at least a minute earlier, Varde suggests it. Tap <span class="ui">Use</span> to switch. The first stop stays put, and if the route ends where it started, so does the last one.</div>
+  <h3>Saving and following the route</h3>
+  <ul>
+    <li><span class="ui">Save Route</span> gives the route a name, a note and a folder, and adds it to <b>Routes</b> in My Trips. <span class="ui">Elevation profile</span> shows the whole route.</li>
+    <li><span class="ui">Start</span> guides you stop by stop. If you are not at the first stop, guidance takes you there first. At the top you see which stop you are heading for and what comes next. When you arrive, guidance carries on to the next stop, calculated from where you are. <span class="ui">Skip</span> goes straight on to the next stop.</li>
+    <li>To open a saved route again, tap the navigation arrow next to the route in My Trips, <span class="ui">Open in Route Planner</span>. Then tap <span class="ui">Start</span>.</li>
+  </ul>
+  <div class="info"><b>Good to know</b>When guidance ends, the route disappears from the map. Save it first if you want to use it again.</div>
+</section>
+
+<!-- 8 -->
 <section class="sheet chapter" id="transit">
-  <div class="chapter-head"><div class="num">7</div><h2>Public transport</h2><div class="tag">Entur</div></div>
+  <div class="chapter-head"><div class="num">8</div><h2>Public transport</h2><div class="tag">Entur</div></div>
   <div class="with-shot">
     <div>
       <p class="lead">Varde shows stops for bus, train, metro, tram, boat and air, with real-time departures from Entur.</p>
@@ -275,9 +305,9 @@
   </div>
 </section>
 
-<!-- 8 -->
+<!-- 9 -->
 <section class="sheet chapter" id="tracks">
-  <div class="chapter-head"><div class="num">8</div><h2>My Trips</h2><div class="tag">Tracks, routes and places</div></div>
+  <div class="chapter-head"><div class="num">9</div><h2>My Trips</h2><div class="tag">Tracks, routes and places</div></div>
   <div class="with-shot">
     <div>
       <p class="lead">Tap <span class="ui">My Trips</span> (the hiker at the bottom of the button column). Here you find <b>Tracks</b> you have recorded, <b>Routes</b> you plan to walk and <b>Places</b> you have saved.</p>
@@ -291,7 +321,7 @@
       <ul>
         <li>Tracks and routes are listed folder by folder, like places. Places, tracks and routes share the same folders. Tap a track to show it on the map, and <span class="ui">Hide on Map</span> to remove it. Touch and hold a track and choose <span class="ui">Save as Route</span> to walk it again.</li>
         <li>Tap the share button, <span class="ui">Share as GPX</span>, to send the track as a GPX file by email, to Files or to another app.</li>
-        <li>Swipe left to edit or delete a track or a route.</li>
+        <li>Swipe left to edit or delete a track or a route. Routes you have created in Varde can be opened again with the navigation arrow. See chapter 7.</li>
       </ul>
       <h3>Routes from other apps</h3>
       <p>Open a GPX file in Varde from Files, Mail or AirDrop, or tap <span class="ui">Import GPX File</span> (the document with a plus). The track in the file is added to <b>Routes</b>, and the waypoints become saved places in their own folder. If you delete the route, the places that came with it are deleted too.</p>
@@ -301,9 +331,9 @@
   </div>
 </section>
 
-<!-- 9 -->
+<!-- 10 -->
 <section class="sheet chapter" id="offline">
-  <div class="chapter-head"><div class="num">9</div><h2>Offline maps</h2><div class="tag">Before you go</div></div>
+  <div class="chapter-head"><div class="num">10</div><h2>Offline maps</h2><div class="tag">Before you go</div></div>
   <p class="lead">Coverage is often poor in the mountains. Download the maps for the area you are heading to while you are online, and they will show without a connection too.</p>
   <ol class="steps">
     <li>Move and zoom the map so it shows the area you want to download.</li>
@@ -334,9 +364,9 @@
   <div class="tip"><b>Tip</b>Download the map at home on Wi-Fi the evening before your trip. Then try airplane mode to check that the map shows.</div>
 </section>
 
-<!-- 10 -->
+<!-- 11 -->
 <section class="sheet chapter" id="privacy">
-  <div class="chapter-head"><div class="num">10</div><h2>Privacy, sources and safety</h2><div class="tag">About Varde</div></div>
+  <div class="chapter-head"><div class="num">11</div><h2>Privacy, sources and safety</h2><div class="tag">About Varde</div></div>
   <h3>Privacy</h3>
   <p>Varde has no server of its own, no account, no tracking and no ads. Coordinates are only sent to the services below when needed, for example to look up the terrain elevation where you are or to plan a trip. Tracks you record are stored only on your device.</p>
 
@@ -357,7 +387,7 @@
   <div class="warn"><b>Varde is an aid</b>Warnings and elevations are indicative. Always use your own judgement in the mountains and at sea, bring a map and compass on longer trips, and follow the Norwegian Mountain Code (Fjellvettreglene).</div>
   <ul>
     <li>Charge your iPhone before the trip, and consider bringing a power bank. GPS and the screen use power.</li>
-    <li>Download maps for the area before you go (chapter 9).</li>
+    <li>Download maps for the area before you go (chapter 10).</li>
     <li>Check the avalanche warning on varsom.no and the weather forecast before heading into avalanche terrain.</li>
     <li>Tell someone where you are going and when you expect to be back.</li>
   </ul>
